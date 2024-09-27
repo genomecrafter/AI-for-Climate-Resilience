@@ -22,5 +22,5 @@ st.sidebar.title("Navigate")
 
 page = st.sidebar.radio("Pages", list(Tabs.keys()))
 
-if page in ["Home","About"]:
+if page in ["Home","About","Prediction"]:
     Tabs[page].app()
