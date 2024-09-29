@@ -1,15 +1,16 @@
 import streamlit as st
 
-def app(df):
+def app(df,og):
     st.title("Dataset Info")
 
-    st.mardown("""<p style="font-size:20px;">
-                   Go to [NOAA](https://www.ncdc.noaa.gov/cdo-web/search) 
-                </p>""", unsafe_allow_html=True)
+    st.markdown('<p style="font-size:20px;">Go to <a href="https://www.ncdc.noaa.gov/cdo-web/search" target="_blank">NOAA</a></p>', unsafe_allow_html=True)
     
     st.subheader("View Data")
+    
+    with st.expander("View Original Data"):
+        st.dataframe(og)
 
-    with st.expander("View Data"):
+    with st.expander("View Preprocessed Data"):
         st.dataframe(df)
 
     st.subheader("Columns Description:")
