@@ -67,18 +67,18 @@ def app():
                 # Display MAE as the accuracy metric
                 st.write(f"Prediction Accuracy (Mean Absolute Error):")
                 st.write(f"Precipitation MAE: {mae_prcp:.2f} mm")
-                st.write(f"Tmax MAE: {mae_tmax:.2f} °C")
-                st.write(f"Tmin MAE: {mae_tmin:.2f} °C")
+                st.write(f"Tmax MAE: {mae_tmax:.2f} °F")
+                st.write(f"Tmin MAE: {mae_tmin:.2f} °F")
 
             else:
                 st.write("No actual data available for comparison to calculate accuracy.")
 
             # Display predictions in a table
             st.write("Weather Predictions:")
-            st.table(pred_df[['Sl.No', 'Date', 'Predicted_Precipitation', 'Predicted_Tmax', 'Predicted_Tmin']].style.format({
+            st.table(pred_df[['Date', 'Predicted_Precipitation', 'Predicted_Tmax', 'Predicted_Tmin']].style.format({
                 "Predicted_Precipitation": "{:.2f} mm",
-                "Predicted_Tmax": "{:.2f} °C",
-                "Predicted_Tmin": "{:.2f} °C"
+                "Predicted_Tmax": "{:.2f} °F",
+                "Predicted_Tmin": "{:.2f} °F"
             }))
 
         except Exception as e:
