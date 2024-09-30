@@ -26,9 +26,7 @@ def app():
             color: white;
             font-size: 18px;
         }
-        .team-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+
         .team-table tr:hover {
             background-color: #ddd;
         }
@@ -71,7 +69,3 @@ def app():
             </tbody>
         </table>
     """, unsafe_allow_html=True)
-
-# Call the app function
-if __name__ == "__main__":
-    app()

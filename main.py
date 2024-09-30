@@ -31,3 +31,5 @@ if page in ["Home","About","Prediction"]:
     Tabs[page].app()
 elif page in ["Data Info"]:
     Tabs[page].app(df,og)
+else:
+    Tabs[page].app()

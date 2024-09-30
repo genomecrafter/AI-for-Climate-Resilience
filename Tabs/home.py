@@ -153,7 +153,6 @@ def app():
                 Together, we can build a sustainable future through AI and innovation.<br> 
                 Get involved and be part of the solution!
             </p>
-            <p class="contact">Contact Us: <strong>dhu0918@gmail.com</strong></p>
         </div>
         """, unsafe_allow_html=True
     )

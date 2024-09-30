@@ -14,6 +14,7 @@ def load_data():
     df = pd.read_csv('weather.csv')
     threshold = len(df) * 0.9
     df.dropna(thresh=len(df) - threshold, axis=1, inplace=True)
+    df.dropna()#changes
     return df
 
 @st.cache_resource()
